@@ -1,56 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Obrigado pela sua compra</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 60px 20px;
-      background-color: #ffffff;
-      font-family: Arial, sans-serif;
-      color: #000000;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin: 10px 0;
-    }
-
-    hr {
-      margin: 40px auto 20px;
-      width: 80%;
-      border: 0;
-      border-top: 1px solid #aaa;
-    }
-
-    .footer {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pela sua compra!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffaf5;
+            color: #222;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .text h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .text p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .highlight {
+            color: #a8641a;
+            font-weight: bold;
+        }
+        .image {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Obrigado pela sua compra!</h1>
+    <div class="container">
+        <div class="text">
+            <h1>Olá <span class="highlight">%%customer_name%%</span>,<br>Obrigado pela sua compra!</h1>
+            <p>Cada peça que produzimos carrega a <span class="highlight">tradição</span>, a <span class="highlight">qualidade</span> e o <span class="highlight">cuidado</span> da cerâmica artesanal.</p>
+            <p>Esperamos que nossos produtos tragam beleza, aconchego e personalidade ao seu espaço.<br>
+            Sua satisfação é a nossa maior recompensa!</p>
+            <p>Entraremos em contato através do seu e-mail: <strong>%%customer_email%%</strong></p>
+        </div>
+        <div class="image">
+            <img src="042671ca-5c19-4a85-ae4f-bc8163dec669.png" alt="Cerâmica artesanal">
+        </div>
+    </div>
 
-  <p>Agora é com a gente, estamos preparando tudo com muito carinho</p>
-  <p>Em breve entraremos em contato com você.</p>
+    <footer>
+        Equipe Fontoura & Kiehl
+    </footer>
 
-  <hr>
+    <!-- Script oficial Yampi para preencher variáveis -->
+    <script>
+        var yampiThankYouScript = document.createElement('script');
+        yampiThankYouScript.setAttribute('src', 'https://cdn.yampi.me/thankyou/thankyou.min.js');
+        yampiThankYouScript.setAttribute('type', 'text/javascript');
+        document.getElementsByTagName('head')[0].appendChild(yampiThankYouScript);
+    </script>
 
-  <div class="footer">
-    Equipe fontoura&kiehl
-  </div>
-
+    <!-- Google Ads Conversion -->
+    <!--
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-SEU_ID/conversion_label'});
+    </script>
+    -->
 </body>
 </html>
 
