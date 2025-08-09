@@ -42,6 +42,25 @@
 <body>
 
     <div class="container">
-        <h1>Olá <span class=
+        <h1>Olá <span class="highlight">%%customer_name%%</span>, Obrigado pela sua compra!</h1>
+        <p>Cada peça que produzimos carrega a <span class="highlight">tradição</span>, a <span class="highlight">qualidade</span> e o <span class="highlight">cuidado</span> da cerâmica artesanal.</p>
+        <p>Esperamos que nossos produtos tragam beleza, aconchego e personalidade ao seu espaço.<br>
+        Sua satisfação é a nossa maior recompensa!</p>
+        <p>Entraremos em contato através do seu e-mail: <strong>%%customer_email%%</strong></p>
 
+        <footer>
+            Equipe Fontoura & Kiehl
+        </footer>
+    </div>
+
+    <!-- Script oficial Yampi -->
+    <script>
+        var yampiThankYouScript = document.createElement('script');
+        yampiThankYouScript.setAttribute('src', 'https://cdn.yampi.me/thankyou/thankyou.min.js');
+        yampiThankYouScript.setAttribute('type', 'text/javascript');
+        document.getElementsByTagName('head')[0].appendChild(yampiThankYouScript);
+    </script>
+
+</body>
+</html>
 
